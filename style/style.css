@@ -396,3 +396,8 @@ footer ul li{
 .copyright{
     padding-top: 30px;
 }
+
+/* 모바일 */
+.ham, .mobilenav, .mobilebg{
+    display: none;
+}

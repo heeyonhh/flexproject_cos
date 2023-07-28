@@ -106,6 +106,7 @@
     #service ul:first-child{
         margin-left: unset;
     }
+
     #service ul li a{
         font-size: 0.8rem;
     }
@@ -117,5 +118,51 @@
     #footer_logo, footer ul{
         margin-left: unset;
         margin-right: unset;
+    }
+}
+
+@media (max-width:768px){
+    .ham, .mobilenav, .mobilebg{
+        display: block;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    header{
+        height: 110px;
+        position: fixed;
+    }
+
+    .ham{
+        z-index: 2;
+        position: fixed;
+        top: 50px;
+        left: 30px;
+        font-size: 1.8rem;
+        margin-left: 30px;
+    }
+
+    .bi-search, .bi-person-plus, .bi-heart, .bi-bag{
+        font-size: 1.5rem;
+    }
+
+    .logo{
+        width: unset;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .gbnav{
+        position: absolute;
+        right: 0;
+        gap: 30px;
+    }
+
+   .menu_memo, .bgimg, .mobilenone, .country{
+        display: none;
     }
 }

@@ -1,3 +1,4 @@
+// pc 메뉴 배경화면 효과
 $(function(){
     $('.nav>ul>li').mouseover(function(){
         $(this).find('.depth2').addClass('active');
