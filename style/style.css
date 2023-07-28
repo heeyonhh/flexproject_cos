@@ -187,7 +187,7 @@ header{
 }
 
 .menueffect.active{
-    height: 2642px;
+    height: 2710px;
     opacity: 1;
 }
 
@@ -258,7 +258,7 @@ section .female a:hover, section .male a:hover{
 /* 아티클 */
 article{
     width: 100%;
-    height: 1045px;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -267,23 +267,21 @@ article{
     width: 100%;
     height: 145px;
     display: flex;
-    align-items: end;
+    align-items: center;
     justify-content: center;
     font-size: 2rem;
 }
 
 #article_m{
     width: 100%;
-    height: 640px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    padding: 0 10px 30px 10px;
 }
 
 #article_m a{
-    width: 23%;
-    height: 640px;
     display: block;
     text-decoration: none;
     display: flex;

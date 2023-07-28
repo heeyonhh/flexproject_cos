@@ -1,0 +1,56 @@
+@media (min-width:1920px) {
+    .depth2 li a{
+        margin-left: 110px;
+    }
+
+    .menu_memo{
+        bottom: 40px;
+        left: 140px;
+    }
+}
+
+@media (max-width:1257px) {
+    .topnav_t, .topnav_b{
+        height: 40px;
+    }
+
+    .topnav_t, .topnav_b,
+    .gbnav a, .depth2 li a, .menu_memo,
+    #service ul li a,
+    footer ul li, .at_shopping{
+        font-size: 1rem;
+    }
+
+    .depth2 li a{
+        margin-left: 40px;
+    }
+
+    .menu_memo{
+        left: 60px;
+    }
+
+    section .female a, section .male a,
+    .at_name{
+        font-size: 1.2rem;
+    }
+
+    .gbnav a{
+        margin-right: 30px;
+    }
+
+    #service{
+        height: 340px;
+    }
+
+    footer{
+        height: 400px;
+    }
+
+    #footer_logo{
+        margin-right: 165px;
+    }
+
+    footer ul{
+        margin-right: 110px;
+    }
+}
