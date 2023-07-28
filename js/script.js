@@ -25,6 +25,15 @@ $(function(){
         $('.bi-x-lg').click(function(){
             $('.mobilebg').hide();
         });
-    })
+    });
+});
 
-})
+//모바일 섹션 슬라이드
+setInterval(function(){
+    $('.mobanner li:first-child')
+    .fadeIn({marginLeft:'-768px'},3000)
+    .next('li')
+    .fadeOut({marginLeft:0},3000)
+    .end()
+    .appendTo('.mobanner');
+},3000);

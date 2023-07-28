@@ -131,6 +131,7 @@
     }
 
     header{
+        width: 100%;
         height: 110px;
         position: fixed;
     }
@@ -170,7 +171,7 @@
     .mobilebg{
         z-index: 3;
         width: 100%;
-        height: 3011px;
+        height: 3201px;
         background-color: rgba(0, 0, 0, 0.499);
         position: absolute;
         top: 0;
@@ -180,7 +181,7 @@
     /* 모바일 메뉴 */
     .mobilenav{
         width: 70%;
-        height: 3011px;
+        height: 3201px;
         background-color: #fff;
         position: relative;
     }
@@ -217,5 +218,60 @@
         position: absolute;
         top: 1%;
         right: 5%;
+    }
+
+    /* 섹션 이미지 슬라이드 */
+    section{
+        display: none;
+    }
+
+    .mosec{
+        z-index: -1;
+        width: 100%;
+        height: 1070px;
+        position: relative;
+    }
+
+    .mofix{
+        width: 100%;
+        height: 110px;
+        background-color: #fff;
+    }
+
+    .mobanner{
+        background-color: #fff;
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 960px;
+    }
+
+    .mosec a{
+        width: 170px;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        padding: 10px 30px;
+        background-color: white;
+        border: 1px solid rgb(40, 40, 40);
+        position: relative;
+        bottom: 200px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin-bottom: 20px;
+    }
+
+    .mosec a:hover{
+        background-color: rgba(255, 255, 255, 0.571);
+    }
+
+    footer{
+        flex-wrap: wrap;
+        height: 500px;
+        gap: 60px;
+    }
+
+    #service ul li a, footer ul li{
+        text-align: center;
     }
 }
