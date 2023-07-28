@@ -35,8 +35,8 @@ $(".mobanner>li").hide().first().show();
 setInterval(function(){
     let nextIndex = (currentIndex+1) % 2; 
 
-    $(".mobanner>li").eq(currentIndex).fadeOut(1200);
-    $(".mobanner>li").eq(nextIndex).fadeIn(1200);
+    $(".mobanner>li").eq(currentIndex).fadeOut(1000);
+    $(".mobanner>li").eq(nextIndex).fadeIn(1000);
 
     currentIndex = nextIndex;
-}, 3000);
+}, 2000);

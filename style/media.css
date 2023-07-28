@@ -239,7 +239,6 @@
     }
 
     .mobanner{
-        background-color: #fff;
         display: block;
         overflow: hidden;
         width: 100%;
@@ -268,7 +267,7 @@
     footer{
         flex-wrap: wrap;
         height: 500px;
-        gap: 60px;
+        gap: 100px;
     }
 
     #service ul li a, footer ul li{
