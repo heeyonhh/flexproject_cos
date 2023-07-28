@@ -13,10 +13,10 @@ $(function(){
 //모바일 메뉴
 $(function(){
     $('.mobilenav>li').mouseover(function(){
-        $(this).find('.mobiledepth2').show();
+        $(this).find('.mobiledepth2').stop().slideDown(200);
     });
     $('.mobilenav>li').mouseout(function(){
-        $(this).find('.mobiledepth2').hide();
+        $(this).find('.mobiledepth2').stop().slideUp(200);
     });
 
     // 메뉴 쇼 하이드
@@ -29,11 +29,14 @@ $(function(){
 });
 
 //모바일 섹션 슬라이드
+let currentIndex = 0;
+$(".mobanner>li").hide().first().show();
+
 setInterval(function(){
-    $('.mobanner li:first-child')
-    .fadeIn({marginLeft:'-768px'},3000)
-    .next('li')
-    .fadeOut({marginLeft:0},3000)
-    .end()
-    .appendTo('.mobanner');
-},3000);
+    let nextIndex = (currentIndex+1) % 2; 
+
+    $(".mobanner>li").eq(currentIndex).fadeOut(1200);
+    $(".mobanner>li").eq(nextIndex).fadeIn(1200);
+
+    currentIndex = nextIndex;
+}, 3000);
