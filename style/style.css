@@ -95,6 +95,13 @@ header{
     justify-content: center;
 }
 
+.logo a{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav{
     width: 50%;
     height: 69px;
@@ -107,7 +114,7 @@ header{
 
 .nav>ul>li>a{
     display: block;
-    padding: 21px 30px;
+    padding: 23px 30px;
     text-decoration: none;
     font-size: 1.2rem;
 }
@@ -228,6 +235,7 @@ section .female{
     background-image: url(../img/section1.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -239,6 +247,7 @@ section .male{
     background-image: url(../img/section2.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -278,7 +287,7 @@ article{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding: 0 10px 30px 10px;
+    padding: 0 10px 40px 10px;
 }
 
 #article_m a{
@@ -288,7 +297,7 @@ article{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
 }
 
 #article_m a img{
