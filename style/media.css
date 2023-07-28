@@ -139,7 +139,7 @@
         z-index: 2;
         position: fixed;
         top: 50px;
-        left: 30px;
+        left: 3g0px;
         font-size: 1.8rem;
         margin-left: 30px;
     }
@@ -164,5 +164,58 @@
 
    .menu_memo, .bgimg, .mobilenone, .country{
         display: none;
+    }
+
+    /* 모바일 배경 */
+    .mobilebg{
+        z-index: 3;
+        width: 100%;
+        height: 3011px;
+        background-color: rgba(0, 0, 0, 0.499);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    /* 모바일 메뉴 */
+    .mobilenav{
+        width: 70%;
+        height: 3011px;
+        background-color: #fff;
+        position: relative;
+    }
+
+    .mobilenav>li>a{
+        text-decoration: none;
+        display: block;
+        padding: 20px 40px;
+        font-size: 1.2rem;
+    }
+
+    .mobilenav>li:hover>a{
+        color: #a0a0a0;
+    }
+
+    .mobilebg, .mobiledepth2{
+        display: none;
+    }
+    
+    .mobiledepth2 li a{
+        text-decoration: none;
+        display: block;
+        padding: 10px 40px;
+        font-size: 1rem;
+    }
+
+    .mobiledepth2 li:hover > a{
+        color: #a0a0a0;
+    }
+
+    .bi-x-lg{
+        font-size: 1.3rem;
+        color: #fff;
+        position: absolute;
+        top: 1%;
+        right: 5%;
     }
 }
