@@ -29,14 +29,19 @@ $(function(){
 });
 
 //모바일 섹션 슬라이드
-let currentIndex = 0;
-$(".mobanner>li").hide().first().show();
+$(function(){
+    let currentIndex = 0; //현재 이미지
+    $(".sliderWrap").append($(".slider").first().clone(true)); //첫번째 이미지를 복사해서 마지막에 추가
 
-setInterval(function(){
-    let nextIndex = (currentIndex+1) % 2; 
+    setInterval(() => {
+        currentIndex++;     //현재 이미지를 1씩 추가
+        $(".sliderWrap").animate({marginLeft: -100 * currentIndex + "%"}, 600);   //이미지 애니메이션
 
-    $(".mobanner>li").eq(currentIndex).fadeOut(1000);
-    $(".mobanner>li").eq(nextIndex).fadeIn(1000);
-
-    currentIndex = nextIndex;
-}, 2000);
+        if(currentIndex == 2){  //마지막 이미지
+            setTimeout(() => {
+                $(".sliderWrap").animate({marginLeft: 0}, 0);   //애니메이션 정지
+                currentIndex = 0;   //현재 이미지 초기화
+            }, 700);
+        }
+    }, 3000);
+});

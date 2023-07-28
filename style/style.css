@@ -398,6 +398,6 @@ footer ul li{
 }
 
 /* 모바일 */
-.ham, .mobilenav, .mobilebg, .mobanner{
+.ham, .mobilebg, .mosec{
     display: none;
 }

@@ -122,7 +122,7 @@
 }
 
 @media (max-width:768px){
-    .ham, .mobilenav, .mobilebg{
+    .ham, .mobilebg, .mosec{
         display: block;
     }
 
@@ -140,7 +140,7 @@
         z-index: 2;
         position: fixed;
         top: 50px;
-        left: 3g0px;
+        left: 30px;
         font-size: 1.8rem;
         margin-left: 30px;
     }
@@ -238,11 +238,31 @@
         background-color: #fff;
     }
 
-    .mobanner{
-        display: block;
+    #slider {
         overflow: hidden;
-        width: 100%;
+    }
+
+    .sliderWrap {
+        width: 300%;
         height: 960px;
+        display: flex;
+    }
+
+    .sliderWrap .slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .sliderWrap .slider.s1 {
+        background-image: url(../img/section1.jpg);
+    }
+
+    .sliderWrap .slider.s2 {
+        background-image: url(../img/section2.jpg);
     }
 
     .mosec a{
