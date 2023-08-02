@@ -342,3 +342,60 @@
         padding-top: 40px;
     }
 }
+
+@media (max-width:450px){
+    .topnav_b{
+        font-size: 0.8rem;
+    }
+    .ham{
+        left: -5px;
+    }
+    .bi-search{
+        left: 72px;
+    }
+    .gbnav{
+        gap: 15px;
+        margin-right: 14px;
+    }
+    .mosec{
+        height: 670px;
+    }
+    .sliderWrap{
+        height: 560px;
+    }
+    footer{
+        height: 530px;
+        padding: 36px;
+    }
+}
+
+@media (max-width: 375px){
+    .ham{
+        font-size: 1.5rem;
+        top: 56px;
+    }
+    .bi-search, .bi-heart, .bi-bag {
+        font-size: 1.3rem;
+    }
+    .bi-search{
+        top: 59px;
+    }
+    .mosec{
+        height: 570px;
+    }
+    .sliderWrap{
+        height: 460px;
+    }
+    #article_t{
+        font-size: 1.7rem;
+        height: 110px;
+    }
+    #article_b{
+        height: 222px;
+    }
+    footer {
+        height: 570px;
+        gap: 57px;
+        padding: 20px;
+    }
+}
