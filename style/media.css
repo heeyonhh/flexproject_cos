@@ -224,30 +224,25 @@
     section{
         display: none;
     }
-
     .mosec{
         z-index: -1;
         width: 100%;
         height: 1070px;
         position: relative;
     }
-
     .mofix{
         width: 100%;
         height: 110px;
         background-color: #fff;
     }
-
     #slider {
         overflow: hidden;
     }
-
     .sliderWrap {
         width: 300%;
         height: 960px;
         display: flex;
     }
-
     .sliderWrap .slider {
         position: relative;
         width: 100%;
@@ -256,15 +251,12 @@
         background-position: center;
         background-repeat: no-repeat;
     }
-
     .sliderWrap .slider.s1 {
         background-image: url(../img/section1.jpg);
     }
-
     .sliderWrap .slider.s2 {
         background-image: url(../img/section2.jpg);
     }
-
     .mosec a{
         width: 170px;
         display: block;
@@ -279,17 +271,14 @@
         transform: translate(-50%,-50%);
         margin-bottom: 10px;
     }
-
     .mosec a:hover{
         background-color: rgba(255, 255, 255, 0.571);
     }
-
     footer{
         flex-wrap: wrap;
         height: 500px;
         gap: 100px;
     }
-
     #service ul li a, footer ul li{
         text-align: center;
     }
@@ -299,22 +288,57 @@
     .mosec{
         height: 860px;
     }
-
     .sliderWrap{
         height: 750px;
     }
-
     #service{
         gap: 100px;
     }
-
     footer{
         height: 420px;
         gap: 80px;
         row-gap: 40px;
     }
-
     .copyright{
         padding-top: 15px;
     }    
+}
+
+@media (max-width:555px){
+    .bi-search{
+        position: fixed;
+        top: 56px;
+        left: 110px;
+    }
+    .mosec{
+        height: 810px;
+    }
+    .sliderWrap{
+        height: 700px;
+    }
+}
+
+@media (max-width:490px){
+    .mosec{
+        height: 725px;
+    }
+    .sliderWrap{
+        height: 615px;
+    }
+    #service{
+        gap: 60px;
+    }
+    footer{
+        padding: 50px;
+        justify-content: unset;
+        height: 560px;
+        row-gap: 40px;
+    }
+    footer ul li{
+        text-align: unset;
+        font-size: 0.8rem;
+    }
+    .copyright{
+        padding-top: 40px;
+    }
 }
