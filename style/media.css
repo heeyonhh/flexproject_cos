@@ -1,142 +1,216 @@
 @media (min-width:1920px) {
-    .depth2 li a{
+    .depth2 li a {
         margin-left: 110px;
     }
 
-    .menu_memo{
+    .menu_memo {
         bottom: 40px;
         left: 140px;
     }
 }
 
 @media (max-width:1257px) {
-    .topnav_t, .topnav_b{
+
+    .topnav_t,
+    .topnav_b {
         height: 40px;
     }
 
-    .topnav_t, .topnav_b,
-    .gbnav a, .depth2 li a, .menu_memo,
+    .topnav_t,
+    .topnav_b,
+    .gbnav a,
+    .depth2 li a,
+    .menu_memo,
     #service ul li a,
-    footer ul li, .at_shopping{
+    footer ul li,
+    .at_shopping {
         font-size: 1rem;
     }
 
-    .depth2 li a{
+    .depth2 li a {
         margin-left: 40px;
     }
 
-    .menu_memo{
+    .menu_memo {
         left: 60px;
     }
 
-    section .female a, section .male a,
-    .at_name{
+    section .female a,
+    section .male a,
+    .at_name {
         font-size: 1.2rem;
     }
 
-    .gbnav a{
+    .gbnav a {
         margin-right: 30px;
     }
 
-    #service{
+    #service {
         height: 340px;
     }
 
-    footer{
-        height: 400px;
-    }
-
-    #footer_logo{
+    #footer_logo {
         margin-right: 165px;
     }
 
-    footer ul{
+    footer ul {
         margin-right: 110px;
     }
 }
 
-@media (max-width:1024px){
-    header{
-        height: auto;
-    }
-
-    .topnav_t{
-        display: none;
-    }
-
-    .logo, .gbnav{
+@media (max-width:1190px) {
+    .logo {
         width: 25%;
     }
 
+    .nav {
+        width: 46%;
+    }
+
+    .nav>ul>li>a {
+        padding: 20px 25px;
+    }
+
+    .gbnav {
+        width: 29%;
+    }
+
+    .gbnav a {
+        margin-right: 17px;
+    }
+
+    #service {
+        gap: 148px;
+        padding-left: 21px;
+    }
+
+    footer ul li {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:1084px) {
+    .logo {
+        width: 13%;
+    }
     .nav{
+        width: 52%;
+    }
+    .gbnav{
+        width: 35%;
+        margin-right: unset;
+    }
+    .nav > ul > li > a {
+        padding: 23px 20px;
+    }
+    #service {
+        justify-content: center;
+        gap: 160px;
+        padding-left: unset;
+    }
+    #service ul li a{
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    footer{
+        padding: 40px;
+        gap: 40px;
+    }
+    #footer_logo {
+        margin-right: unset;
+        margin-left: unset;
+    }
+    footer ul{
+        margin-right: unset;
+    }
+}
+
+@media (max-width:1024px) {
+    header {
+        height: auto;
+    }
+
+    .topnav_t {
+        display: none;
+    }
+
+    .logo,
+    .gbnav {
+        width: 25%;
+    }
+
+    .nav {
         width: 50%;
     }
 
-    .logo a img{
+    .logo a img {
         width: 80px;
     }
 
-    .nav>ul>li>a{
+    .nav>ul>li>a {
         font-size: 1em;
     }
 
-    .gbnav a{
+    .gbnav a {
         font-size: 0.8rem;
         margin-right: 10px;
     }
 
-    #article_m{
+    #article_m {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         padding: 0 20px 40px 20px;
     }
 
-    #service{
+    #service {
         height: 280px;
         justify-content: center;
         gap: 160px;
     }
 
-    footer{
-        height: 280px;
+    footer {
         justify-content: center;
         gap: 80px;
     }
 
-    #service ul:first-child{
+    #service ul:first-child {
         margin-left: unset;
     }
 
-    #service ul li a{
+    #service ul li a {
         font-size: 0.8rem;
     }
 
-    footer ul li{
+    footer ul li {
         font-size: 0.6rem;
     }
 
-    #footer_logo, footer ul{
+    #footer_logo,
+    footer ul {
         margin-left: unset;
         margin-right: unset;
     }
 }
 
-@media (max-width:768px){
-    .ham, .mobilebg, .mosec{
+@media (max-width:768px) {
+
+    .ham,
+    .mobilebg,
+    .mosec {
         display: block;
     }
 
-    .nav{
+    .nav {
         display: none;
     }
 
-    header{
+    header {
         width: 100%;
         height: 110px;
         position: fixed;
     }
 
-    .ham{
+    .ham {
         z-index: 2;
         position: fixed;
         top: 52px;
@@ -145,11 +219,14 @@
         margin-left: 30px;
     }
 
-    .bi-search, .bi-person-plus, .bi-heart, .bi-bag{
+    .bi-search,
+    .bi-person-plus,
+    .bi-heart,
+    .bi-bag {
         font-size: 1.5rem;
     }
 
-    .logo{
+    .logo {
         width: unset;
         position: absolute;
         top: 50%;
@@ -157,18 +234,21 @@
         transform: translate(-50%, -50%);
     }
 
-    .gbnav{
+    .gbnav {
         position: absolute;
         right: 0;
         gap: 30px;
     }
 
-   .menu_memo, .bgimg, .mobilenone, .country{
+    .menu_memo,
+    .bgimg,
+    .mobilenone,
+    .country {
         display: none;
     }
 
     /* 모바일 배경 */
-    .mobilebg{
+    .mobilebg {
         z-index: 3;
         width: 100%;
         height: 3421px;
@@ -179,40 +259,41 @@
     }
 
     /* 모바일 메뉴 */
-    .mobilenav{
+    .mobilenav {
         width: 70%;
         height: 3421px;
         background-color: #fff;
         position: relative;
     }
 
-    .mobilenav>li>a{
+    .mobilenav>li>a {
         text-decoration: none;
         display: block;
         padding: 20px 40px;
         font-size: 1.2rem;
     }
 
-    .mobilenav>li:hover>a{
+    .mobilenav>li:hover>a {
         color: #a0a0a0;
     }
 
-    .mobilebg, .mobiledepth2{
+    .mobilebg,
+    .mobiledepth2 {
         display: none;
     }
-    
-    .mobiledepth2 li a{
+
+    .mobiledepth2 li a {
         text-decoration: none;
         display: block;
         padding: 10px 40px;
         font-size: 1rem;
     }
 
-    .mobiledepth2 li:hover > a{
+    .mobiledepth2 li:hover>a {
         color: #a0a0a0;
     }
 
-    .bi-x-lg{
+    .bi-x-lg {
         font-size: 1.3rem;
         color: #fff;
         position: absolute;
@@ -221,28 +302,33 @@
     }
 
     /* 섹션 이미지 슬라이드 */
-    section{
+    section {
         display: none;
     }
-    .mosec{
+
+    .mosec {
         z-index: -1;
         width: 100%;
         height: 1070px;
         position: relative;
     }
-    .mofix{
+
+    .mofix {
         width: 100%;
         height: 110px;
         background-color: #fff;
     }
+
     #slider {
         overflow: hidden;
     }
+
     .sliderWrap {
         width: 300%;
         height: 960px;
         display: flex;
     }
+
     .sliderWrap .slider {
         position: relative;
         width: 100%;
@@ -251,13 +337,16 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+
     .sliderWrap .slider.s1 {
         background-image: url(../img/section1.jpg);
     }
+
     .sliderWrap .slider.s2 {
         background-image: url(../img/section2.jpg);
     }
-    .mosec a{
+
+    .mosec a {
         width: 170px;
         display: block;
         text-align: center;
@@ -268,134 +357,191 @@
         position: relative;
         bottom: 200px;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         margin-bottom: 10px;
     }
-    .mosec a:hover{
+
+    .mosec a:hover {
         background-color: rgba(255, 255, 255, 0.571);
     }
-    footer{
+
+    footer {
         flex-wrap: wrap;
-        height: 500px;
         gap: 100px;
     }
-    #service ul li a, footer ul li{
+
+    #service ul li a,
+    footer ul li {
         text-align: center;
     }
 }
 
-@media (max-width:590px){
-    .mosec{
+@media (max-width:590px) {
+    .mosec {
         height: 860px;
     }
-    .sliderWrap{
+
+    .sliderWrap {
         height: 750px;
     }
-    #service{
+
+    #service {
         gap: 100px;
     }
-    footer{
-        height: 420px;
+
+    footer {
         gap: 80px;
         row-gap: 40px;
     }
-    .copyright{
+
+    .copyright {
         padding-top: 15px;
-    }    
+    }
 }
 
-@media (max-width:555px){
-    .bi-search{
+@media (max-width:555px) {
+    .bi-search {
         position: fixed;
         top: 56px;
         left: 110px;
     }
-    .mosec{
+
+    .mosec {
         height: 810px;
     }
-    .sliderWrap{
+
+    .sliderWrap {
         height: 700px;
     }
 }
 
-@media (max-width:490px){
-    .mosec{
+@media (max-width:490px) {
+    .mosec {
         height: 725px;
     }
-    .sliderWrap{
+
+    .sliderWrap {
         height: 615px;
     }
-    #service{
+
+    #service {
         gap: 60px;
     }
-    footer{
+
+    footer {
         padding: 50px;
         justify-content: unset;
-        height: 560px;
         row-gap: 40px;
     }
-    footer ul li{
+
+    footer ul li {
         text-align: unset;
         font-size: 0.8rem;
     }
-    .copyright{
+
+    .copyright {
         padding-top: 40px;
     }
 }
 
-@media (max-width:450px){
-    .topnav_b{
+@media (max-width:450px) {
+    .topnav_b {
         font-size: 0.8rem;
     }
-    .ham{
+
+    .ham {
         left: -5px;
     }
-    .bi-search{
+
+    .bi-search {
         left: 72px;
     }
-    .gbnav{
+
+    .gbnav {
         gap: 15px;
         margin-right: 14px;
     }
-    .mosec{
+
+    .mosec {
         height: 670px;
     }
-    .sliderWrap{
+
+    .sliderWrap {
         height: 560px;
     }
-    footer{
-        height: 530px;
+
+    footer {
         padding: 36px;
     }
 }
 
-@media (max-width: 375px){
-    .ham{
+@media (max-width: 375px) {
+    .ham {
         font-size: 1.5rem;
         top: 56px;
     }
-    .bi-search, .bi-heart, .bi-bag {
+
+    .bi-search,
+    .bi-heart,
+    .bi-bag {
         font-size: 1.3rem;
     }
-    .bi-search{
+
+    .bi-search {
         top: 59px;
     }
-    .mosec{
+
+    .mosec {
         height: 570px;
     }
-    .sliderWrap{
+
+    .sliderWrap {
         height: 460px;
     }
-    #article_t{
+
+    #article_t {
         font-size: 1.7rem;
         height: 110px;
     }
-    #article_b{
+
+    #article_b {
         height: 222px;
     }
+
     footer {
-        height: 570px;
         gap: 57px;
         padding: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .article_more a {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        gap: 47px;
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 357px) {
+    .mosec {
+        height: 550px;
+    }
+
+    .sliderWrap {
+        height: 440px;
+    }
+
+    #service {
+        gap: 37px;
+    }
+
+    footer {
+        gap: 41px;
+        row-gap: 29px;
+        padding: 12px;
     }
 }
