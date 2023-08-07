@@ -40,7 +40,7 @@
 <!-- 카카오 스크립트 -->
 <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <script>
-    Kakao.init('21ba11904f670dc2c52e801574409930'); //javascript키
+    Kakao.init('767a22495c7396d75b6be80f52a05963'); //javascript키
     // console.log(Kakao.isInitialized()); // sdk초기화 여부 판단
     // 카카오 로그인
     function kakaoLogin() {
@@ -50,6 +50,7 @@
                     url: '/v2/user/me',
                     success: function (response) {
                         console.log(response)
+                        window.location.href = 'index.html';
                     },
                     fail: function (error) {
                         console.log(error)
@@ -75,7 +76,7 @@
             })
             Kakao.Auth.setAccessToken(undefined)
         }
-    }  
+    } 
 </script>
 
 </html>
