@@ -17,7 +17,7 @@
             </a>
 
             <!-- 로그아웃 상태 ui -->
-            <div id="logoutbox">
+            <div class="logoutbox">
                 <p class="login">로그인</p>
                 <div class="line hidden">null</div>
                 <p class="padding">아이디 또는 이메일</p>
@@ -36,10 +36,10 @@
             </div>
 
             <!-- 로그인 상태 ui -->
-            <div id="loginbox" style="display: none;">
+            <div class="loginbox">
                 <p id="welcomeMessage"></p>
                 <a href="javascript:kakaoLogout();">
-                    <span>카카오 로그아웃</span>
+                    카카오 로그아웃
                 </a>
             </div>
 
@@ -61,8 +61,9 @@
                     success: function (response) {
                         console.log(response)
                         const name = response.properties.nickname;
-                        const accessToken = authObj.access_token; // accessToken 가져오기
-                    updatelogin(name, accessToken);
+                        const accessToken = authObj.access_token;
+                        updatelogin(name, accessToken);
+
                         window.location.href = 'index.html';
                     },
                     fail: function (error) {
@@ -94,11 +95,9 @@
 
     //로그인 후 ui
     function updatelogin(name, accessToken) {
-        const loginbox = document.getElementById('loginbox');
-        const logoutbox = document.getElementById('logoutbox');
 
-        loginbox.style.display = 'block';
-        logoutbox.style.display = 'none';
+        logoutbox.addItem.on();
+        loginbox.addItem.on();
         welcomeMessage.textContent = `${name} 님 어서오세요.`;
 
         // index.loginLink 텍스트 변경
@@ -108,17 +107,14 @@
         }
 
         // 로그인 유지하기 위해서 스토리지 저장
-        localStorage.setItem('loggedIn', 'true');
         localStorage.setItem('accessToken', accessToken);
     }
 
     //로그아웃 ui 복원
     function updatelogout() {
-        const loginbox = document.getElementById('loginbox');
-        const logoutbox = document.getElementById('logoutbox');
 
-        logoutbox.style.display = 'block';
-        loginbox.style.display = 'none';
+        logoutbox.removeItem.on();
+        loginbox.removeItem.on();
 
         const loginLink = document.querySelector('.loginLink');
         if (loginLink) {
@@ -126,21 +122,8 @@
         }
 
         // 로그인 스토리지 삭제
-        localStorage.removeItem('loggedIn');
         localStorage.removeItem('accessToken');
     }
-
-    //로그인 유지
-    document.addEventListener('DOMContentLoaded', function () {
-        const loggedIn = localStorage.getItem('loggedIn');
-        const accessToken = localStorage.getItem('accessToken');
-
-        if (loggedIn === 'true' && accessToken) {
-            updatelogin(accessToken);
-        } else {
-            updatelogout();
-        }
-    });
 </script>
 
 </script>

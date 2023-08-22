@@ -45,6 +45,7 @@ a{
 }
 
 #box{
+    padding-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,11 +54,14 @@ a{
     height: auto;
 }
 
-#logoutbox{
+.logoutbox{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.logoutbox.on{
+    display: none;
 }
 
 .gohome{
@@ -140,11 +144,13 @@ a{
     font-size: 0.9rem;
 }
 
-#loginbox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.loginbox{
+    display: none;
+    text-align: center;
     gap: 50px;
     margin-top: 70px;
+}
+
+.loginbox.on{
+    display: block;
 }
