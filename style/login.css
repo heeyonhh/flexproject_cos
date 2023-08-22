@@ -53,6 +53,13 @@ a{
     height: 800px;
 }
 
+#logoutbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .gohome{
     display: flex;
     flex-direction: column;
@@ -131,4 +138,8 @@ a{
     width: 300px;
     margin-bottom: 20px;
     font-size: 0.9rem;
+}
+
+#loginbox{
+    display: none;
 }
