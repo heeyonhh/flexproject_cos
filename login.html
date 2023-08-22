@@ -7,6 +7,8 @@
     <title>COS 온라인 스토어</title>
     <link rel="stylesheet" href="./style/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <script src="./js/jquery-1.12.4.min.js"></script>
 </head>
 
 <body>
@@ -21,7 +23,7 @@
                 <p class="login">로그인</p>
                 <div class="line hidden">null</div>
                 <p class="padding">아이디 또는 이메일</p>
-                <input type="id email">
+                <input type="text">
                 <p class="padding">비밀번호</p>
                 <input type="password">
                 <a href="#none" class="loginbutton">로그인</a>
@@ -96,8 +98,9 @@
     //로그인 후 ui
     function updatelogin(name, accessToken) {
 
-        logoutbox.addItem.on();
-        loginbox.addItem.on();
+        $('.logoutbox').addClass('on');
+        $('.loginbox').addClass('on');
+        const welcomeMessage = document.getElementById('welcomeMessage');
         welcomeMessage.textContent = `${name} 님 어서오세요.`;
 
         // index.loginLink 텍스트 변경
@@ -113,8 +116,8 @@
     //로그아웃 ui 복원
     function updatelogout() {
 
-        logoutbox.removeItem.on();
-        loginbox.removeItem.on();
+        $('.logoutbox').removeClass('on');
+        $('.loginbox').removeClass('on');
 
         const loginLink = document.querySelector('.loginLink');
         if (loginLink) {
