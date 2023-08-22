@@ -60,9 +60,9 @@
                     url: '/v2/user/me',
                     success: function (response) {
                         console.log(response)
-                        // window.location.href = 'index.html';
                         const name = response.properties.nickname;
                         updatelogin(name);
+                        window.location.href = 'index.html';
                     },
                     fail: function (error) {
                         console.log(error)
