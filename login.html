@@ -97,7 +97,7 @@
         const loginLink = document.getElementById('loginLink');
 
         if (isLoggedIn) {
-            loginLink.textContent = ''; // 로그인된 상태일 때 텍스트 변경
+            loginLink.textContent = '{use.name}'; // 로그인된 상태일 때 텍스트 변경
         } else {
             loginLink.textContent = '로그인'; // 로그인되지 않은 상태일 때 텍스트 변경
         }
