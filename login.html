@@ -76,7 +76,7 @@
             })
             Kakao.Auth.setAccessToken(undefined)
         }
-    } 
+    }
 
     // 카카오 로그인 상태 확인
     function checkKakaoLoginStatus() {
@@ -93,19 +93,17 @@
         });
     }
 
-    // 로그인 상태에 따라 텍스트 변경
     function updateLoginText(isLoggedIn) {
-        const loginLink = document.getElementById('index#loginLink');
+        const loginLink = document.getElementById('loginLink');
 
         if (isLoggedIn) {
-            loginLink.textContent = 'OOO'; // 로그인된 상태일 때 텍스트 변경
+            loginLink.textContent = ''; // 로그인된 상태일 때 텍스트 변경
         } else {
             loginLink.textContent = '로그인'; // 로그인되지 않은 상태일 때 텍스트 변경
         }
     }
 
-    // 페이지 로드시 카카오 로그인 상태 확인
-    window.onload = function() {
+    window.onload = function () {
         checkKakaoLoginStatus();
     };
 </script>
