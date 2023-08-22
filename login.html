@@ -61,7 +61,8 @@
                     success: function (response) {
                         console.log(response)
                         const name = response.properties.nickname;
-                        updatelogin(name);
+                        const accessToken = authObj.access_token; // accessToken 가져오기
+                    updatelogin(name, accessToken);
                         window.location.href = 'index.html';
                     },
                     fail: function (error) {
@@ -92,13 +93,12 @@
     }
 
     //로그인 후 ui
-    function updatelogin(name) {
+    function updatelogin(name, accessToken) {
         const loginbox = document.getElementById('loginbox');
         const logoutbox = document.getElementById('logoutbox');
 
-        // 로그인 상태에 따라 UI 업데이트
-        loginbox.style.display = 'block'; // 보이게 함
-        logoutbox.style.display = 'none';  // 감추기
+        loginbox.style.display = 'block';
+        logoutbox.style.display = 'none';
         welcomeMessage.textContent = `${name} 님 어서오세요.`;
 
         // index.loginLink 텍스트 변경
@@ -106,14 +106,17 @@
         if (loginLink) {
             loginLink.textContent = `${name}님`;
         }
+
+        // 로그인 유지하기 위해서 스토리지 저장
+        localStorage.setItem('loggedIn', 'true');
+        localStorage.setItem('accessToken', accessToken);
     }
 
-    //로그아웃 복원
+    //로그아웃 ui 복원
     function updatelogout() {
         const loginbox = document.getElementById('loginbox');
         const logoutbox = document.getElementById('logoutbox');
 
-        // 로그아웃 상태에 따라 UI 업데이트
         logoutbox.style.display = 'block';
         loginbox.style.display = 'none';
 
@@ -121,7 +124,23 @@
         if (loginLink) {
             loginLink.textContent = '로그인';
         }
+
+        // 로그인 스토리지 삭제
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('accessToken');
     }
+
+    //로그인 유지
+    document.addEventListener('DOMContentLoaded', function () {
+        const loggedIn = localStorage.getItem('loggedIn');
+        const accessToken = localStorage.getItem('accessToken');
+
+        if (loggedIn === 'true' && accessToken) {
+            updatelogin(accessToken);
+        } else {
+            updatelogout();
+        }
+    });
 </script>
 
 </script>
