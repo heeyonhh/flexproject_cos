@@ -64,8 +64,9 @@
                         console.log(response)
                         const name = response.properties.nickname;
                         const accessToken = authObj.access_token;
-                        updatelogin(name, accessToken);
+                        localStorage.setItem('accessToken', accessToken);
 
+                        updatelogin(name);
                         window.location.href = 'index.html';
                     },
                     fail: function (error) {
@@ -85,6 +86,7 @@
                 url: '/v1/user/unlink',
                 success: function (response) {
                     console.log(response)
+                    localStorage.removeItem('accessToken');
                     updatelogout();
                 },
                 fail: function (error) {
@@ -95,40 +97,37 @@
         }
     }
 
-    //로그인 후 ui
-    function updatelogin(name, accessToken) {
+    document.addEventListener("DOMContentLoaded", function () {
+        const accessToken = localStorage.getItem('accessToken');
+        if (accessToken) {
+            //로그인 후 ui
+            function updatelogin(name) {
 
-        $('.logoutbox').addClass('on');
-        $('.loginbox').addClass('on');
-        const welcomeMessage = document.getElementById('welcomeMessage');
-        welcomeMessage.textContent = `${name} 님 어서오세요.`;
+                $('.logoutbox').addClass('on');
+                $('.loginbox').addClass('on');
+                const welcomeMessage = document.getElementById('welcomeMessage');
+                welcomeMessage.textContent = `${name} 님 어서오세요.`;
 
-        // index.loginLink 텍스트 변경
-        const loginLink = document.querySelector('.loginLink');
-        if (loginLink) {
-            loginLink.textContent = `${name}님`;
+                // index.loginLink 텍스트 변경
+                const loginLink = document.querySelector('.loginLink');
+                if (loginLink) {
+                    loginLink.textContent = `${name}님`;
+                }
+            }
+        } else {
+            //로그아웃 ui 복원
+            function updatelogout() {
+
+                $('.logoutbox').removeClass('on');
+                $('.loginbox').removeClass('on');
+
+                const loginLink = document.querySelector('.loginLink');
+                if (loginLink) {
+                    loginLink.textContent = '로그인';
+                }
+            }
         }
-
-        // 로그인 유지하기 위해서 스토리지 저장
-        localStorage.setItem('accessToken', accessToken);
-    }
-
-    //로그아웃 ui 복원
-    function updatelogout() {
-
-        $('.logoutbox').removeClass('on');
-        $('.loginbox').removeClass('on');
-
-        const loginLink = document.querySelector('.loginLink');
-        if (loginLink) {
-            loginLink.textContent = '로그인';
-        }
-
-        // 로그인 스토리지 삭제
-        localStorage.removeItem('accessToken');
-    }
-</script>
-
+    });
 </script>
 
 </html>
