@@ -50,7 +50,7 @@
                     url: '/v2/user/me',
                     success: function (response) {
                         console.log(response)
-                        window.location.href = 'index.html';
+                        // window.location.href = 'index.html';
                     },
                     fail: function (error) {
                         console.log(error)
@@ -77,25 +77,6 @@
             Kakao.Auth.setAccessToken(undefined)
         }
     }
-
-    // 사용자 정보 가져오기
-    Kakao.Auth.login({
-    success: function (response) {
-        Kakao.API.request({
-            url: '/v2/user/me',
-            success: function (userData) {
-                localStorage.setItem('userData', JSON.stringify(userData));
-                window.location.href = 'index.html';
-            },
-            fail: function (error) {
-                console.log(error);
-            },
-        });
-    },
-    fail: function (error) {
-        console.log(error);
-    },
-});
 </script>
 
 </script>
