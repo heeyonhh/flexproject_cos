@@ -11,31 +11,38 @@
 
 <body>
     <div id="wrap">
-        <div class="box">
+        <div id="box">
             <a href="index.html" class="gohome">
                 <i class="bi bi-x-lg"></i>
             </a>
-            <p class="login">로그인</p>
-            <div class="line hidden">null</div>
-            <p class="padding">아이디 또는 이메일</p>
-            <input type="id email">
-            <p class="padding">비밀번호</p>
-            <input type="password">
-            <a href="#none" class="loginbutton">로그인</a>
-            <div class="idsearch">
-                <a href="#none">아이디 찾기</a>
-                <a href="#none">비밀번호 찾기</a>
+
+            <!-- 로그아웃 상태 ui -->
+            <div id="logoutbox">
+                <p class="login">로그인</p>
+                <div class="line hidden">null</div>
+                <p class="padding">아이디 또는 이메일</p>
+                <input type="id email">
+                <p class="padding">비밀번호</p>
+                <input type="password">
+                <a href="#none" class="loginbutton">로그인</a>
+                <div class="idsearch">
+                    <a href="#none">아이디 찾기</a>
+                    <a href="#none">비밀번호 찾기</a>
+                </div>
+                <p class="kakaoment">카카오 계정을 연동해 간편하게 로그인해보세요</p>
+                <a href="javascript:kakaoLogin();" class="kakaologin">카카오 로그인</a>
+                <p class="hdidment">COS 온라인 스토어는 더현대닷컴이 운영·제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.</p>
+                <a href="#none" class="order">비회원 주문조회</a>
             </div>
-            <p class="kakaoment">카카오 계정을 연동해 간편하게 로그인해보세요</p>
-            <a href="javascript:kakaoLogin();" class="kakaologin">카카오 로그인</a>
-            <p class="hdidment">COS 온라인 스토어는 더현대닷컴이 운영·제공하는 사이트로 기존 회원은 더현대닷컴 아이디와 비밀번호로 바로 이용 가능합니다.</p>
-            <a href="#none" class="order">비회원 주문조회</a>
-            <br>
-            <div id="welcomeMessage" class="hidden">
+
+            <!-- 로그인 상태 ui -->
+            <div id="loginbox">
+                <p id="welcomeMessage"></p>
                 <a href="javascript:kakaoLogout();">
                     <span>카카오 로그아웃</span>
                 </a>
             </div>
+
         </div>
     </div>
 </body>
@@ -55,8 +62,7 @@
                         console.log(response)
                         // window.location.href = 'index.html';
                         const name = response.properties.nickname;
-                        updateWelcomeMessage(name);
-
+                        updatelogin(name);
                     },
                     fail: function (error) {
                         console.log(error)
@@ -75,6 +81,7 @@
                 url: '/v1/user/unlink',
                 success: function (response) {
                     console.log(response)
+                    updatelogout();
                 },
                 fail: function (error) {
                     console.log(error)
@@ -85,10 +92,35 @@
     }
 
     //로그인 후 ui
-    function updateWelcomeMessage(name) {
-        const welcomeMessage = document.getElementById('welcomeMessage');
+    function updatelogin(name) {
+        const loginbox = document.getElementById('loginbox');
+        const logoutbox = document.getElementById('logoutbox');
+
+        // 로그인 상태에 따라 UI 업데이트
+        loginbox.style.display = 'block'; // 보이게 함
+        logoutbox.style.display = 'none';  // 감추기
         welcomeMessage.textContent = `${name} 님 어서오세요.`;
-        welcomeMessage.classList.remove('hidden');
+
+        // index.loginLink 텍스트 변경
+        const loginLink = document.querySelector('.loginLink');
+        if (loginLink) {
+            loginLink.textContent = `${name}님`;
+        }
+    }
+
+    //로그아웃 복원
+    function updatelogout() {
+        const loginbox = document.getElementById('loginbox');
+        const logoutbox = document.getElementById('logoutbox');
+
+        // 로그아웃 상태에 따라 UI 업데이트
+        logoutbox.style.display = 'block';
+        loginbox.style.display = 'none';
+
+        const loginLink = document.querySelector('.loginLink');
+        if (loginLink) {
+            loginLink.textContent = '로그인';
+        }
     }
 </script>
 

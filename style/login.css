@@ -44,7 +44,7 @@ a{
     background-color: #ededed1d;
 }
 
-.box{
+#box{
     display: flex;
     flex-direction: column;
     justify-content: center;
