@@ -218,8 +218,19 @@ header{
     margin-right: 5px;
 }
 
-.gbnav a:hover{
+.gbnav a:hover, .kakaolooutpc:hover{
     color: #a0a0a0;
+}
+
+.kakaolooutpc{
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-right: 20px;
+    display: none;
+}
+
+.kakaolooutpc.active{
+    display: block;
 }
 
 /* 섹션 메인 이미지 영역*/

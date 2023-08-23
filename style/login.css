@@ -54,16 +54,6 @@ a{
     height: auto;
 }
 
-.logoutbox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.logoutbox.on{
-    display: none;
-}
-
 .gohome{
     display: flex;
     flex-direction: column;
@@ -142,15 +132,4 @@ a{
     width: 300px;
     margin-bottom: 20px;
     font-size: 0.9rem;
-}
-
-.loginbox{
-    display: none;
-    text-align: center;
-    gap: 50px;
-    margin-top: 70px;
-}
-
-.loginbox.on{
-    display: block;
 }
