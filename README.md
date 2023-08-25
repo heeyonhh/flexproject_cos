@@ -1,7 +1,7 @@
 # COS 반응형 사이트
 
 
-## 주소
+## https://coskorea.netlify.app/
 
 
 HTML, CSS, Javascript를 사용하여 만든 반응형 웹 표준 사이트입니다.
@@ -15,6 +15,8 @@ COS 공식 사이트의 레이아웃 디자인과 기능을 유사하게 보이�
 
 
 ## 기능 설명
+
+geo api
 
 반응형 미디어쿼리
 
